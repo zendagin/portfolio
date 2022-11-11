@@ -10,5 +10,6 @@ export default defineNuxtConfig({
     },
     appConfig: {
         config: "public"
-    }
+    },
+    modules: ['@nuxtjs/tailwindcss'],
 });
