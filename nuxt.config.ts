@@ -11,5 +11,6 @@ export default defineNuxtConfig({
     appConfig: {
         config: "public"
     },
-    modules: ['@nuxtjs/tailwindcss'],
+    modules: ["@nuxtjs/tailwindcss"],
+    buildModules: ["@pinia/nuxt"],
 });
