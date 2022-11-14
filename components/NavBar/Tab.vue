@@ -17,9 +17,10 @@ const {label, path} = defineProps({
     min-height: var(--navbar-height);
     padding: var(--navbar-tab-padding);
     text-align: center;
+    transition: 0.3s;
+    transition-property: color;
 
     &:hover {
-        transition: 0.3s;
         color: var(--main-color);
     }
 }

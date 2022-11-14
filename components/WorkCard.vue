@@ -28,9 +28,12 @@ const {name, url, img} = defineProps({
 });
 </script>
 
-<style scoped>
-.screenshot:hover {
-    filter: brightness(0.9);
+<style lang="scss" scoped>
+.screenshot {
     transition: 0.3s;
+
+    &:hover {
+        filter: brightness(0.9);
+    }
 }
 </style>
