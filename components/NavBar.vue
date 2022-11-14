@@ -1,6 +1,6 @@
 <template>
-    <div class="nav-bar container">
-
+    <div class="nav-bar">
+        <div class="container mx-auto"></div>
     </div>
 </template>
 
