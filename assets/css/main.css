@@ -1,8 +1,7 @@
 :root {
     --main-color: rgb(64, 156, 64);
     --main-color-light: rgb(203, 235, 203);
-    --color-1: rgb(131, 122, 74);
-    --color-2: rgb(227, 146, 230);
+    --bg-light: #f1f5f9;
 
     --navbar-height: 60px;
     --footer-height: 64px;
@@ -10,8 +9,9 @@
 }
 
 body {
-    font-family: Inter,Helvetica Neue,Arial,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif;
-    background-color: #f1f9f5;
+    font-family: Inter, Helvetica Neue, Arial, Hiragino Kaku Gothic ProN, Hiragino Sans, Meiryo, sans-serif;
+    background-color: var(--bg-light);
+    @apply text-lg text-gray-900;
 }
 
 .title {
@@ -19,5 +19,9 @@ body {
 }
 
 .content {
-    @apply rounded-lg bg-white p-10 shadow;
+    @apply rounded-xl bg-white p-10 shadow;
+}
+
+.subtitle {
+    @apply mb-3 text-2xl font-semibold;
 }
