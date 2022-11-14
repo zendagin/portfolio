@@ -5,7 +5,7 @@
         </div>
         <div class="content">
             <section>
-                <h2 class="subtitle">Who am I</h2>
+                <h2 class="subtitle mb-3">Who am I</h2>
                 <p>
                     I am Cheng Tak Kin, a software developer from Hong Kong.
                 </p>
@@ -15,7 +15,7 @@
                 </p>
             </section>
             <section>
-                <h2 class="subtitle">What I do</h2>
+                <h2 class="subtitle mb-3">What I do</h2>
                 <p>
                     I develop applications mainly in Typescript and Vue.
                 </p>
