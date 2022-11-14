@@ -9,11 +9,18 @@
                 <p>
                     I am Cheng Tak Kin, a software developer from Hong Kong.
                 </p>
+                <p>
+                    Graduated from The University Hong Kong on 2019, with {{ exp}} years of experience in developing web
+                    applications.
+                </p>
             </section>
             <section>
                 <h2 class="subtitle">What I do</h2>
                 <p>
-                    I am Cheng Tak Kin, a software developer from Hong Kong.
+                    I develop applications mainly in Typescript and Vue.
+                </p>
+                <p>
+                    The products are deployed on cloud platforms like AWS and GCP.
                 </p>
             </section>
         </div>
@@ -21,6 +28,8 @@
 </template>
 
 <script setup lang="ts">
+import dayjs from "dayjs";
+const exp = dayjs().diff(dayjs("2019/06/30"), "years");
 </script>
 
 <style scoped>
