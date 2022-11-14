@@ -1,6 +1,8 @@
 :root {
-    --main-color: rgb(64, 156, 64);
-    --main-color-light: rgb(203, 235, 203);
+    --main-color: rgb(77, 187, 114);
+    --main-color-light: rgb(235, 249, 242);
+    --main-color-dark: rgb(59, 154, 107);
+
     --bg-light: #f1f5f9;
 
     --navbar-height: 60px;
@@ -28,4 +30,14 @@ body {
 
 p {
     @apply mb-2;
+}
+
+.btn {
+    background-color: var(--main-color);
+    @apply font-bold py-2 px-4 rounded-full text-white;
+}
+
+.btn-blue:hover {
+    background-color: var(--main-color-dark);
+    transition: 0.3s;
 }
