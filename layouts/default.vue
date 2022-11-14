@@ -8,6 +8,9 @@
     </div>
 </template>
 
+<script setup lang="ts">
+</script>
+
 <style scoped>
 .view {
     min-height: 100vh;
