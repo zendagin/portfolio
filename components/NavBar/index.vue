@@ -1,6 +1,6 @@
 <template>
     <div class="nav-bar">
-        <div class="container mx-auto">
+        <div class="container mx-auto flex">
             <NavBarTab label="About" path="/"></NavBarTab>
             <NavBarTab label="Works" path="/works"></NavBarTab>
         </div>
@@ -12,7 +12,6 @@
 
 <style scoped>
 .nav-bar {
-    background-color: var(--color-1);
     min-height: var(--navbar-height);
 }
 </style>

@@ -11,10 +11,16 @@ const {label, path} = defineProps({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .navbar-tab {
     line-height: var(--navbar-height);
+    min-height: var(--navbar-height);
     padding: var(--navbar-tab-padding);
     text-align: center;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: var(--main-color-light);
+    }
 }
 </style>
