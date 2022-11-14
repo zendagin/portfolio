@@ -13,14 +13,14 @@ const {label, path} = defineProps({
 
 <style lang="scss" scoped>
 .navbar-tab {
-    line-height: var(--navbar-height);
+    display: block;
     min-height: var(--navbar-height);
     padding: var(--navbar-tab-padding);
     text-align: center;
-    transition: 0.5s;
 
     &:hover {
-        background-color: var(--main-color-light);
+        transition: 0.3s;
+        color: var(--main-color);
     }
 }
 </style>
