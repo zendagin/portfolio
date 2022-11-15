@@ -36,4 +36,8 @@ const {name, url, img} = defineProps({
         filter: brightness(0.9);
     }
 }
+
+img {
+    min-height: 583px;
+}
 </style>
