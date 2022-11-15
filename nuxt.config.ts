@@ -3,7 +3,13 @@ export default defineNuxtConfig({
     app: {
         head: {
             title: "Portfolio | Cheng Tak Kin",
-        }
+            meta: [
+                {charset: "utf-8"},
+            ],
+            link: [
+                {rel: "icon", type: "image/png", href: "/favicon.ico"},
+            ],
+        },
     },
     runtimeConfig: {
         secret: "private"
