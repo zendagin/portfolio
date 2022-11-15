@@ -6,7 +6,36 @@ on:
       - master
 
 jobs:
+  component-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: "16"
+          cache: "npm"
+      - name: Install project dependencies
+        run: npm ci
+      - name: Run component test
+        run: npm run test:component
+
+  e2e-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: "16"
+          cache: "npm"
+      - name: Install project dependencies
+        run: npm ci
+      - name: Run e2e test
+        run: npm run test:e2e
+
   build:
+    needs:
+      - component-test
+      - e2e-test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
