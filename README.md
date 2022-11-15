@@ -1,42 +1,33 @@
-# Nuxt 3 Minimal Starter
+### Profolio of Cheng Tak Kin (with Nuxt3)
+## I build something like this
+---
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
-
-## Setup
-
-Make sure to install the dependencies:
+### Install the dependencies:
 
 ```bash
-# yarn
-yarn install
-
-# npm
 npm install
-
-# pnpm
-pnpm install --shamefully-hoist
 ```
 
-## Development Server
-
-Start the development server on http://localhost:3000
-
+### Start a development server
 ```bash
 npm run dev
 ```
 
-## Production
-
-Build the application for production:
-
+### Run component tests (Vitest)
 ```bash
-npm run build
+npm run test:component
 ```
 
-Locally preview production build:
-
+### Run e2e tests (Cypress)
 ```bash
-npm run preview
+npm run test:e2e
 ```
+---
+## CI/CD
+Deployed to [Cloudflare Pages](https://chengtakkin.pages.dev) using Github Actions.
 
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+![alt text](./readme/github-actions.png)
+
+
+
+See the [pipeline](.github/workflows/cloudflare-page.yml).
