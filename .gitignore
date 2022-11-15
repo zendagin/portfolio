@@ -7,6 +7,7 @@ node_modules
 .env
 dist
 coverage
+functions
 
 # IDEs and editors
 /.idea
