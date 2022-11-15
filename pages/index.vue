@@ -33,10 +33,6 @@ const exp = dayjs().diff(dayjs("2019/06/30"), "years");
 </script>
 
 <style scoped>
-.main {
-    padding-bottom: 100px;
-}
-
 section:not(:last-child) {
     @apply mb-8;
 }

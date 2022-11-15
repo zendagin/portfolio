@@ -28,10 +28,6 @@
 </script>
 
 <style scoped>
-.main {
-    padding-bottom: 100px;
-}
-
 .card:not(:last-child) {
     @apply mb-10;
 }

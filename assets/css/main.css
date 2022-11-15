@@ -16,6 +16,11 @@ body {
     @apply text-lg text-gray-900;
 }
 
+.main {
+    padding-bottom: 80px;
+    @apply px-4;
+}
+
 .title {
     @apply py-8 text-3xl font-medium;
 }
