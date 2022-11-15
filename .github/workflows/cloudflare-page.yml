@@ -1,0 +1,48 @@
+name: Deploy to cloudflare page
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: "16"
+          cache: "npm"
+      - name: Install project dependencies
+        run: npm ci
+      - name: Build the project
+        run: npm run build:cf
+      - name: Upload output
+        uses: actions/upload-artifact@v3
+        with:
+          name: output
+          path: |
+            .output/public/
+            functions/
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: "16"
+      - name: Download output
+        uses: actions/download-artifact@v3
+        with:
+          name: output
+      - name: Install wrangler
+        run: npm i -g wrangler
+
+      - name: Publish to Cloudflare Pages
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_PROJECT: ${{ secrets.CLOUDFLARE_PROJECT }}
+        run: wrangler pages publish .output/public/ --project-name $CLOUDFLARE_PROJECT
